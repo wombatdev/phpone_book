@@ -9,11 +9,23 @@
 </head>
 <body>
 
-<?php
+<h1>PHPWNED BOOK</h1>
+<!-- <h2>Enter your name for PHPWNAGE:</h2> -->
 
-echo "test";
+<form method="post" action="index.php">
+    <fieldset>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" />
+    </fieldset>
+    <fieldset>
+        <label for="number">Number:</label>
+        <input type="text" id="number" name="number" placeholder="Enter your number" />
+    </fieldset>
+    <input type="submit" value="Submit your information" />
+</form>
 
- ?>
+Welcome <?php echo $_POST["name"]; ?><br>
+Your number is: <?php echo $_POST["number"]; ?>
 
 </body>
 </html>
