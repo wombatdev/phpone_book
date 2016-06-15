@@ -4,8 +4,6 @@
     <title>PHPWNAGE BOOK</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <!-- <script src="war.js"></script> -->
 </head>
 <body>
     <?php
@@ -24,6 +22,9 @@
                 unset($json[$delnum]);
                 $json = array_values($json);
         }
+        $encode = json_encode($json, true);
+        file_put_contents("entries.json",$encode);
+    }
         header('Location:index.php');
     ?>
 </body>
